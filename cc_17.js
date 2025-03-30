@@ -15,6 +15,8 @@ class Customer{
         return this.purchaseHistory.reduce((total,amount)=>total+amount,0);
     }
 }
+
+
 //Task 2
 class SalesRep{//create salesrep class
     constructor(name){
@@ -31,3 +33,21 @@ class SalesRep{//create salesrep class
         return client ? client.getTotalSpent(): 0;
     }
 }
+
+
+//Task 3 
+// create VIP customer class
+class VIPCustomer extends Customer{
+    constructor(name,email,vipLevel){
+        super(name,email);
+        this.vipLevel=vipLevel;//create viplevel property
+    }
+    //log total spent with bonus
+    getTotalSpent(){
+        const totalSpent=super.getTotalSpent();
+        return totalSpent *1.1
+    }
+}
+
+
+//Task 4
