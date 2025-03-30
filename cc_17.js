@@ -16,3 +16,18 @@ class Customer{
     }
 }
 //Task 2
+class SalesRep{//create salesrep class
+    constructor(name){
+        this.name=name;//add name property
+        this.clients=[];//add client property
+    }
+    //add customer to client list
+    addClient(customer){
+        this.clients.push(customer);
+    }
+    //find client and get total spent
+    getClientTotal(name){
+        const client=this.clients.find(client=>client.name===name);
+        return client ? client.getTotalSpent(): 0;
+    }
+}
