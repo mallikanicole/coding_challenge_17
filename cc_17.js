@@ -15,3 +15,4 @@ class Customer{
         return this.purchaseHistory.reduce((total,amount)=>total+amount,0);
     }
 }
+//Task 2
